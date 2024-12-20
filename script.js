@@ -1,14 +1,14 @@
 const images = [
-    'Imagens/imagem01.jpg',
-    'Imagens/imagem02.jpg',
-    'Imagens/imagem03.jpg',
-    'Imagens/imagem04.jpg',
-    'Imagens/imagem05.jpg',
-    'Imagens/imagem06.jpg',
-    'Imagens/imagem07.jpg',
-    'Imagens/imagem08.jpg',
-    'Imagens/imagem09.jpg',
-    'Imagens/imagem10.jpg'
+    'Imagens/Imagem01.jpg',
+    'Imagens/Imagem02.jpg',
+    'Imagens/Imagem03.jpg',
+    'Imagens/Imagem04.jpg',
+    'Imagens/Imagem05.jpg',
+    'Imagens/Imagem06.jpg',
+    'Imagens/Imagem07.jpg',
+    'Imagens/Imagem08.jpg',
+    'Imagens/Imagem09.jpg',
+    'Imagens/Imagem10.jpg'
     // Adicione mais caminhos para suas imagens aqui
 ];
 
