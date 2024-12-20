@@ -1,0 +1,117 @@
+/* stylesIndex.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    /* Fundo azul claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    /* Evita barras de rolagem */
+    position: relative;
+}
+
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    /* Fundo branco para destaque */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    padding: 30px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    z-index: 10;
+    /* Para que o conteúdo fique acima da neve */
+}
+
+h1 {
+    color: #c0392b;
+    /* Vermelho natalino */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #f7d9d9;
+    /* Sombra leve para destaque */
+}
+
+a#revealButton {
+    display: inline-block;
+    background-color: #27ae60;
+    /* Verde natalino */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+a#revealButton:hover {
+    background-color: #219150;
+    /* Verde mais escuro */
+    transform: scale(1.05);
+    /* Efeito de zoom ao passar o mouse */
+}
+
+/* Fundo com gradiente de céu e neve no chão */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, #87ceeb 0%, #ffffff 80%);
+    /* Céu azul claro e neve no chão */
+    z-index: -2;
+}
+
+/* Flocos de neve */
+@keyframes fall {
+    0% {
+        transform: translateY(-10vh);
+    }
+
+    100% {
+        transform: translateY(110vh);
+    }
+}
+
+@keyframes sway {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(20px);
+    }
+}
+
+/* Criando flocos de neve */
+.snowflake {
+    position: absolute;
+    top: -10vh;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall 10s linear infinite, sway 3s ease-in-out infinite;
+    pointer-events: none;
+    /* Não interfere na interação do usuário */
+}
+
+.snowflake:nth-child(odd) {
+    animation-duration: 8s;
+    animation-delay: 1s;
+}
+
+.snowflake:nth-child(even) {
+    animation-duration: 12s;
+    animation-delay: 2s;
+}

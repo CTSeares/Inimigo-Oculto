@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Imagem Aleatória</title>
+    <style>
+        body {
+            background: url('fundo.jpg'), 
+                        linear-gradient(to bottom right, #2d3e50, #e44d26);
+            background-size: cover;
+            background-position: center;
+            font-family: 'Kaushan Script', cursive;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            color: white;
+            overflow: hidden;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 4em;
+            margin-top: 5%;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+        }
+        .image-container {
+            margin-top: 30px;
+            max-width: 100%;
+            margin: 0 auto;
+            display: inline-block;
+            padding: 0px; /* Borda da imagem */
+            border-radius: 10px;
+            border: 5px solid #fff; /* A borda será aplicada aqui */
+            overflow: hidden; /* Garante que a borda siga a forma da imagem */
+        }
+        #randomImage {
+            max-width: 100%;
+            height: auto;
+            width: 320px; /* Tamanho fixo da largura da imagem */
+            max-height: 450px; /* Tamanho fixo da altura da imagem */
+            object-fit: contain; /* A imagem se ajusta mantendo a proporção */
+        }
+        #subtitle {
+            font-size: 2em;
+            margin-top: 20px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+        }
+        #newImageButton {
+            background-color: #388e3c;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        #newImageButton:hover {
+            background-color: #2c6e2f;
+        }
+        .icons {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-size: 3em;
+        }
+        .icons i {
+            color: gold;
+            animation: bounce 1s infinite alternate;
+        }
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Vai se foder, Alefe</h1>
+        <div class="image-container">
+            <img id="randomImage" src="" alt="Imagem Aleatória">
+        </div>
+        <h2 id="subtitle"></h2>
+        <button id="newImageButton">Nova Imagem</button>
+    </div>
+
+    <div class="icons">
+        <i class="fa fa-tree" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-gift" aria-hidden="true"></i>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
